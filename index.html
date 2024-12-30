@@ -10,7 +10,18 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      animation: background-color-change 20s infinite;
+      background: linear-gradient(45deg, black, darkblue, lightblue, red, orange, pink);
+      background-size: 400% 400%;
+      color: white;
     }
+
+    @keyframes background-color-change {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     .quote-section {
       display: flex;
       align-items: center;
@@ -18,12 +29,25 @@
       flex-direction: column;
       padding: 50px;
     }
+
     .quote-container {
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 20px 0;
+      background-color: black;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 800px;
+      color: white;
     }
+
+    .quote-container:nth-child(1) { background-color: #1a1a1a; color: lightblue; }
+    .quote-container:nth-child(2) { background-color: #2b2b2b; color: orange; }
+    .quote-container:nth-child(3) { background-color: #3c3c3c; color: pink; }
+    .quote-container:nth-child(4) { background-color: #4d4d4d; color: yellow; }
+    .quote-container:nth-child(5) { background-color: #5e5e5e; color: lightgreen; }
+
     .quote-text {
       font-size: 24px;
       font-weight: bold;
@@ -31,10 +55,33 @@
       max-width: 400px;
       text-align: center;
     }
+
     .quote-image {
-      max-width: 200px;
+      max-width: 150px;
+      height: 150px;
       margin: 0 20px;
       border-radius: 10px;
+    }
+
+    .social-buttons {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .social-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      color: white;
+      background-color: darkblue;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-buttons a:hover {
+      background-color: lightblue;
     }
   </style>
 </head>
@@ -46,21 +93,27 @@
     </div>
     <div class="quote-container" data-aos="fade-left">
       <p class="quote-text">"Success is not final; failure is not fatal: It is the courage to continue that counts." - Winston Churchill</p>
-      <img src="image2.jpg" alt="Quote 2" class="quote-image">
+      <img src="IMG20241228155301.jpg" alt="Quote 2" class="quote-image">
     </div>
     <div class="quote-container" data-aos="fade-right">
-      <img src="image3.jpg" alt="Quote 3" class="quote-image">
+      <img src="IMG20241228155301.jpg" alt="Quote 3" class="quote-image">
       <p class="quote-text">"Life is what happens when you're busy making other plans." - John Lennon</p>
     </div>
     <div class="quote-container" data-aos="fade-left">
       <p class="quote-text">"Do not watch the clock. Do what it does. Keep going." - Sam Levenson</p>
-      <img src="image4.jpg" alt="Quote 4" class="quote-image">
+      <img src="IMG20241228155301.jpg" alt="Quote 4" class="quote-image">
     </div>
     <div class="quote-container" data-aos="fade-right">
-      <img src="image5.jpg" alt="Quote 5" class="quote-image">
+      <img src="IMG20241228155301.jpg" alt="Quote 5" class="quote-image">
       <p class="quote-text">"The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt</p>
     </div>
   </div>
+
+  <div class="social-buttons">
+    <a href="https://t.me/yourtelegramlink" target="_blank">Join Telegram</a>
+    <a href="https://instagram.com/yourinstagramlink" target="_blank">Follow Instagram</a>
+  </div>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
