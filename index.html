@@ -3,36 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Profile</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Animated Quotes</title>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .quote-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 50px;
+    }
+    .quote-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .quote-text {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 20px;
+      max-width: 400px;
+      text-align: center;
+    }
+    .quote-image {
+      max-width: 200px;
+      margin: 0 20px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <header class="profile-header">
-      <h1 data-aos="fade-up">Coco Rocha</h1>
-      <div class="details" data-aos="fade-up" data-aos-delay="200">
-        <p><strong>Hair Color:</strong> Blonde</p>
-        <p><strong>Eye Color:</strong> Blue</p>
-        <p><strong>Height:</strong> 180</p>
-        <p><strong>Shoe Size:</strong> 39</p>
-        <p><strong>Bust/Waist/Hips:</strong> 84-64-89</p>
-      </div>
-    </header>
-    <main>
-      <section class="portfolio" data-aos="fade-up" data-aos-delay="400">
-        <h2>Portfolio</h2>
-        <div class="portfolio-images">
-          <img src="image1.jpg" alt="Portfolio 1" data-aos="zoom-in">
-          <img src="image2.jpg" alt="Portfolio 2" data-aos="zoom-in" data-aos-delay="200">
-          <img src="image3.jpg" alt="Portfolio 3" data-aos="zoom-in" data-aos-delay="400">
-        </div>
-      </section>
-    </main>
+  <div class="quote-section">
+    <div class="quote-container" data-aos="fade-right">
+      <img src="image1.jpg" alt="Quote 1" class="quote-image">
+      <p class="quote-text">"The only way to do great work is to love what you do." - Steve Jobs</p>
+    </div>
+    <div class="quote-container" data-aos="fade-left">
+      <p class="quote-text">"Success is not final; failure is not fatal: It is the courage to continue that counts." - Winston Churchill</p>
+      <img src="image2.jpg" alt="Quote 2" class="quote-image">
+    </div>
+    <div class="quote-container" data-aos="fade-right">
+      <img src="image3.jpg" alt="Quote 3" class="quote-image">
+      <p class="quote-text">"Life is what happens when you're busy making other plans." - John Lennon</p>
+    </div>
+    <div class="quote-container" data-aos="fade-left">
+      <p class="quote-text">"Do not watch the clock. Do what it does. Keep going." - Sam Levenson</p>
+      <img src="image4.jpg" alt="Quote 4" class="quote-image">
+    </div>
+    <div class="quote-container" data-aos="fade-right">
+      <img src="image5.jpg" alt="Quote 5" class="quote-image">
+      <p class="quote-text">"The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt</p>
+    </div>
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 1000,
+      offset: 200,
+    });
   </script>
 </body>
 </html>
